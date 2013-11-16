@@ -1,0 +1,22 @@
+﻿@{
+    
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gráfica de Precios</title>
+    </head>
+    <body>
+        @{ 
+            var db = Database.Open("Bakery"); 
+            var dbdata = db.Query("SELECT Name, Price FROM Products"); 
+            var myChart = new Chart(width: 450, height: 250) 
+              .AddTitle("Product Sales") 
+              .DataBindTable(dataSource: dbdata, xField: "Name") 
+              .Write();
+        }        
+    </body>
+</html>

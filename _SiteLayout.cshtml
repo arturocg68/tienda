@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>SONY - @Page.Title</title>
+        
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+        @RenderSection("Scripts", required: false)
+    </head>
+
+    <body>
+        <div id="page">
+            <header>
+                <img src="~/images/brand.jpg" alt="sony logo">
+                <nav>
+                    <ul>
+                        <li><a href="~/">Inicio</a></li>
+                        <li><a href="~/About">Acerca de nosotros</a></li>
+                        <li><a href="~/vaio">Tu Próxima Computadora</a></li>
+                        <li><a href="~/grafica">Gráfica de Precios</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="body">
+                @RenderBody()
+            </div>
+            <footer>
+                &copy;@DateTime.Now.Date - Sony Store
+            </footer>
+        </div>
+    </body>
+</html>
